@@ -36,6 +36,6 @@ while True:
         "os_version": platform.platform(),
     }
     print(data)
-        url = "http://c2aazisyda02:40000/api/Machine/claazisybd00"
-        response = requests.post(url, data=data, auth=auth)
-        contador += 1
+    url = "http://c2aazisyda02:40000/api/Machine/claazisybd00"
+    response = requests.post(url, data=data, auth=auth)
+    contador += 1

@@ -1,24 +1,29 @@
 import openai
 import os
 
-openai.api_key = "sua_chave_api_da_openai"
+# Configuração da API key
+openai.api_key = "sua_api_key_aqui"
 
-# Define os arquivos que serão usados para treinar o modelo
-files = [
-    'caminho/do/arquivo1.json',
-    'caminho/do/arquivo2.json'
-]
+# Carrega dados de treinamento de um arquivo local
+with open("seu_arquivo_de_treinamento.json", "r") as f:
+    training_data = f.read()
 
-# Define os parâmetros de treinamento
-model = "text-babbage-001"
+# Define os parâmetros do fine-tuning
+model = "text-davinci-002"
 fine_tune_params = {
-    'model': model,
-    'training_data': files,
+    "model": model,
+    "train": training_data,
+    "prompt": "Seu prompt aqui",
+    "temperature": 0.5,
+    "max_tokens": 1024,
+    "n_epochs": 3,
+    "batch_size": 32
 }
 
-# Inicia o treinamento
+# Executa o fine-tuning
 response = openai.FineTune.create(**fine_tune_params)
 
-# Obtém o ID do modelo treinado
-model_id = response['model']
-print(f"Modelo treinado com ID: {model_id}")
+# Salva o modelo treinado em um arquivo local
+model_id = response.model.id
+model_path = os.path.join("modelos", f"{model_id}.tar.gz")
+response.model.save(model_path)

@@ -1,3 +1,5 @@
+Questão (1)
+
 Para determinar a altitude aproximada do foguete após 7 segundos, podemos utilizar o método da interpolação polinomial, mais especificamente a interpolação de Lagrange. Esse método nos permitirá encontrar uma função que se ajuste aos dados fornecidos e, a partir dessa função, podemos calcular a altitude do foguete em um determinado tempo.
 
 Para utilizar o método de Lagrange, precisamos primeiro encontrar o polinômio interpolador que passa pelos pontos de dados fornecidos. Esse polinômio será de segunda ordem, uma vez que temos três pontos de dados.

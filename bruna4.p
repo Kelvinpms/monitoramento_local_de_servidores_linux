@@ -12,7 +12,7 @@ H = 1.0
 T_top = 20
 T_right = 15
 T_bottom = 25
-T_left = N
+T_left = 22
 
 # Define o número de pontos na placa
 nx = 101

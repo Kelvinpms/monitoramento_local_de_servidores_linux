@@ -1,3 +1,4 @@
+#Questão 3
 import numpy as np
 
 # função que calcula a força em função da altura

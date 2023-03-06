@@ -3,7 +3,7 @@ import psycopg2
 import json
 
 # Endereço da API REST
-url = 'http://c2aazisyda02:40000/api/monitoring'
+url = ''
 
 # Envia uma solicitação GET à API e armazena a resposta em uma variável
 response = requests.get(url)

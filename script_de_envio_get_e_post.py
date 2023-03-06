@@ -47,7 +47,7 @@ while True:
         "ip_address": psutil.net_if_addrs()["Ethernet"][1].address,
         "os_version": platform.platform(),
     }
-    url = "http://c2aazisyda02:40000/api/Monitoring/Monitor/Create"
+    url = ""
     try:
         response1 = requests.get(url, json=data, auth=auth)
         print(response1.text)

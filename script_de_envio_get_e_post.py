@@ -4,7 +4,7 @@ import platform
 import requests
 from requests.auth import HTTPBasicAuth
 
-auth = HTTPBasicAuth('ServerMonitorUsername', 'ServerMonitorPassword')
+auth = HTTPBasicAuth('', '')
 
 contador = 1
 while True:

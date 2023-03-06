@@ -20,8 +20,8 @@ def monitor():
         "mem_available": mem_available,
         "mem_percent": mem_percent
     }
-    # url = "http://127.0.0.1:8000/" Essa linha define a URL da API FastAPI onde os dados serão enviados. No caso, está sendo usada a URL http://127.0.0.1:8000/, que é o endereço local padrão.
-    url = "http://127.0.0.1:8000/api/data"
+    # url = "" Essa linha define a URL da API FastAPI onde os dados serão enviados. No caso, está sendo usada a URL , que é o endereço local padrão.
+    url = ""
     # response = requests.post(url, json=data) Essa linha envia uma requisição POST para a API FastAPI, com os dados obtidos do sistema em formato JSON.
     response = requests.post(url, json=data)
     # print(response.text) Essa linha imprime a resposta da API FastAPI.

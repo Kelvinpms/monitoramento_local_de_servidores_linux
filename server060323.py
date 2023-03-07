@@ -10,9 +10,9 @@ import logging
 
 logging.basicConfig(level=logging.INFO, filename="registro.log", format="%(asctime)s - %(levelname)s - %(message)s")
 
-auth = HTTPBasicAuth('ServerName', 'ServerPassword')
+auth = HTTPBasicAuth('', '')
 
-url = 'http://187.127.61.63/api'
+url = ''
 
 try:       
     request = requests.request('GET', url + '/Server/188.211.160.231', auth=auth) 
